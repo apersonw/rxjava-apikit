@@ -1,0 +1,9 @@
+org/rxjava/apikit/plugin/bean/AbstractTask.class
+org/rxjava/apikit/plugin/bean/JavaClientTask.class
+org/rxjava/apikit/plugin/GenerateUtils.class
+org/rxjava/apikit/plugin/ApikitsMojo.class
+org/rxjava/apikit/plugin/bean/GitTask.class
+org/rxjava/apikit/plugin/bean/Task.class
+org/rxjava/apikit/plugin/MavenUtils.class
+org/rxjava/apikit/plugin/bean/Group.class
+org/rxjava/apikit/plugin/ApikitMojo.class

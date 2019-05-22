@@ -1,0 +1,9 @@
+/Users/happy/Projects/rxjava-apikit/rxjava-apikit-maven-plugin/src/main/java/org/rxjava/apikit/plugin/GenerateUtils.java
+/Users/happy/Projects/rxjava-apikit/rxjava-apikit-maven-plugin/src/main/java/org/rxjava/apikit/plugin/bean/Group.java
+/Users/happy/Projects/rxjava-apikit/rxjava-apikit-maven-plugin/src/main/java/org/rxjava/apikit/plugin/bean/AbstractTask.java
+/Users/happy/Projects/rxjava-apikit/rxjava-apikit-maven-plugin/src/main/java/org/rxjava/apikit/plugin/ApikitMojo.java
+/Users/happy/Projects/rxjava-apikit/rxjava-apikit-maven-plugin/src/main/java/org/rxjava/apikit/plugin/bean/GitTask.java
+/Users/happy/Projects/rxjava-apikit/rxjava-apikit-maven-plugin/src/main/java/org/rxjava/apikit/plugin/bean/JavaClientTask.java
+/Users/happy/Projects/rxjava-apikit/rxjava-apikit-maven-plugin/src/main/java/org/rxjava/apikit/plugin/bean/Task.java
+/Users/happy/Projects/rxjava-apikit/rxjava-apikit-maven-plugin/src/main/java/org/rxjava/apikit/plugin/MavenUtils.java
+/Users/happy/Projects/rxjava-apikit/rxjava-apikit-maven-plugin/src/main/java/org/rxjava/apikit/plugin/ApikitsMojo.java

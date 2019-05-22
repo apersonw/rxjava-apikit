@@ -1,0 +1,27 @@
+<!--#set(ApiClassInfo classInfo)-->
+<!--#set(JavaScriptApiWrapper wrapper)-->
+<!--#set(TypeInfo type)-->
+<!--#set(ApiMethodInfo method)-->
+<!--#set(ApiMethodParamInfo param)-->
+$!{wrapper.imports}
+
+/**
+$!{wrapper.comment(" * ")}
+*/
+declare class $!{wrapper.getDistClassName()} extends AbstractApi {
+
+<!--#for(method : classInfo.methodInfos)-->
+
+##下面是异步带tag
+   /**
+$!{wrapper.formatBaseComment(method.comment,"     * ")}
+    *
+$!{wrapper.requestComment(method,"     * ")}
+    */
+    $!{method.name}($!{wrapper.params(method,true)}):Promise<$!{wrapper.resultTypeString(method)}>;
+##循环结束
+<!--#end-->
+}
+export { $!{wrapper.getDistClassName()} };
+declare const $!{wrapper.fieldName}: $!{wrapper.getDistClassName()};
+export default $!{wrapper.fieldName};

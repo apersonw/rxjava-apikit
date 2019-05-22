@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="rxjava-apikit-maven-plugin" />
+        <module name="rxjava-apikit-example" />
+        <module name="rxjava-apikit-tool" />
+        <module name="rxjava-apikit-core" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="rxjava-apikit" target="1.8" />
+      <module name="rxjava-apikit-core" target="1.8" />
+      <module name="rxjava-apikit-example" target="1.8" />
+      <module name="rxjava-apikit-maven-plugin" target="1.8" />
+      <module name="rxjava-apikit-tool" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="TypeScriptCompiler">
+    <option name="recompileOnChanges" value="true" />
+    <option name="typeScriptCompilerParams" value="--sourceMap true" />
+    <option name="useConfig" value="true" />
+  </component>
+</project>
