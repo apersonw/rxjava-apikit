@@ -1,6 +1,5 @@
 package org.rxjava.apikit.tool.wrapper;
 
-import com.google.common.collect.ImmutableMap;
 import lombok.Getter;
 import lombok.Setter;
 import org.apache.commons.collections4.CollectionUtils;
@@ -8,7 +7,10 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.text.StringEscapeUtils;
 import org.rxjava.apikit.tool.generator.Context;
 import org.rxjava.apikit.tool.generator.NameMaper;
-import org.rxjava.apikit.tool.info.*;
+import org.rxjava.apikit.tool.info.ApiClassInfo;
+import org.rxjava.apikit.tool.info.ApiMethodInfo;
+import org.rxjava.apikit.tool.info.ApiMethodParamInfo;
+import org.rxjava.apikit.tool.info.TypeInfo;
 import org.rxjava.apikit.tool.utils.CommentUtils;
 import org.rxjava.apikit.tool.utils.NameUtils;
 import reactor.core.publisher.Flux;
@@ -29,19 +31,10 @@ public class JavaScriptApiWrapper extends JavaScriptWrapper<ApiClassInfo> {
 
     private NameMaper nameMaper;
 
-    public JavaScriptApiWrapper(Context context, ApiClassInfo classInfo, String rootPackage, NameMaper nameMaper) {
+    public JavaScriptApiWrapper(Context context, ApiClassInfo classInfo, String rootPackage, NameMaper nameMaper, String serviceId) {
         super(context, classInfo, rootPackage);
         this.nameMaper = nameMaper;
-    }
-
-    public String es5Imports() {
-        //自己的目录级别
-        int myLevel = getMyLevel();
-        return "var _AbstractApi2 = require(\"apikit-core/lib/AbstractApi\");\n" +
-                "var _AbstractApi3 = _interopRequireDefault(_AbstractApi2);\n" +
-                "\n" +
-                "var _RequestGroupImpi = require(\"apikit-core/lib/RequestGroupImpi\");\n" +
-                "var _RequestGroupImpi2 = _interopRequireDefault(_RequestGroupImpi);\n";
+        this.setServiceId(serviceId);
     }
 
     private int getMyLevel() {
@@ -96,7 +89,7 @@ public class JavaScriptApiWrapper extends JavaScriptWrapper<ApiClassInfo> {
         int myLevel = getMyLevel();
         String imports = isModel ? getMethodImports() : "";
         return imports +
-                "import {AbstractApi} from 'apikit-core'\n";
+                "import {AbstractApi} from 'rxjava-api-core'\n";
 //        return imports +
 //                "\nimport {AbstractApi} from 'apikit-core'\n" +
 //                "\nimport {requestGroupImpi} from 'apikit-core'\n";

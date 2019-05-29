@@ -1,20 +1,14 @@
-package org.rxjava.apikit.example.admin;
+package org.rxjava.apikit.example.dashboard;
 
 import org.rxjava.apikit.core.Login;
-import org.rxjava.apikit.example.form.PageForm;
 import org.rxjava.apikit.example.form.TestForm;
 import org.springframework.core.annotation.AnnotatedElementUtils;
 import org.springframework.core.annotation.AnnotationAttributes;
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.web.bind.annotation.*;
-import reactor.core.publisher.Mono;
 
 import javax.validation.Valid;
-import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
-import java.lang.reflect.ParameterizedType;
-import java.lang.reflect.Type;
-import java.net.SocketTimeoutException;
 import java.util.Arrays;
 
 /**
@@ -39,7 +33,7 @@ public class AdminTestController {
 
     public static void main(String[] args) throws ClassNotFoundException {
         ClassLoader systemClassLoader = ClassLoader.getSystemClassLoader();
-        Class<?> adminTestController = systemClassLoader.loadClass("org.rxjava.apikit.example.admin.AdminTestController");
+        Class<?> adminTestController = systemClassLoader.loadClass("org.rxjava.apikit.example.dashboard.AdminTestController");
         Package aPackage = adminTestController.getPackage();
         String name1 = adminTestController.getName();
         String name2 = adminTestController.getSimpleName();

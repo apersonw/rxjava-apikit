@@ -1,6 +1,7 @@
 package org.rxjava.apikit.tool.generator.impl;
 
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import org.apache.commons.lang3.StringUtils;
 import org.rxjava.apikit.tool.info.ApiClassInfo;
 import org.rxjava.apikit.tool.info.ParamClassInfo;
 import org.rxjava.apikit.tool.utils.JsonUtils;
@@ -23,17 +24,24 @@ import java.util.stream.Collectors;
  */
 public class JavaScriptApiGenerator extends AbstractCommonGenerator {
 
+
     /**
      * 生成Api类文件
      */
     @Override
     public void generateApiFile(ApiClassInfo apiInfo) throws Exception {
-        JavaScriptApiWrapper wrapper = new JavaScriptApiWrapper(context, apiInfo, rootPackage, apiNameMaper);
-        File tsFile = createApiFile(wrapper, "d.ts");
+        JavaScriptApiWrapper wrapper = new JavaScriptApiWrapper(context, apiInfo, outRootPackage, apiNameMaper, serviceId);
+        File jsFile = createApiFile(wrapper, "js");
+        File dFile = createApiFile(wrapper, "d.ts");
+        executeModule(
+                wrapper,
+                getTemplateFile("Api.httl"),
+                jsFile
+        );
         executeModule(
                 wrapper,
                 getTemplateFile("Api.d.httl"),
-                tsFile
+                dFile
         );
     }
 
@@ -42,11 +50,17 @@ public class JavaScriptApiGenerator extends AbstractCommonGenerator {
      */
     @Override
     public void generateParamFile(BuilderWrapper<ParamClassInfo> wrapper) throws Exception {
-        File tsFile = createParamClassFile(wrapper, "d.ts");
+        File jsFile = createParamClassFile(wrapper, "js");
+        File dFile = createParamClassFile(wrapper, "d.ts");
+        executeModule(
+                wrapper,
+                getTemplateFile("ParamClass.httl"),
+                jsFile
+        );
         executeModule(
                 wrapper,
                 getTemplateFile("ParamClass.d.httl"),
-                tsFile
+                dFile
         );
     }
 
@@ -55,7 +69,7 @@ public class JavaScriptApiGenerator extends AbstractCommonGenerator {
      */
     @Override
     protected BuilderWrapper<ParamClassInfo> createParamClassWarpper(ParamClassInfo paramClassInfo, String distPack, String distName) {
-        JavaScriptParamClassWrapper javaScriptParamClassWrapper = new JavaScriptParamClassWrapper(context, paramClassInfo, rootPackage);
+        JavaScriptParamClassWrapper javaScriptParamClassWrapper = new JavaScriptParamClassWrapper(context, paramClassInfo, outRootPackage);
         javaScriptParamClassWrapper.setDistFolder(distPack);
         return javaScriptParamClassWrapper;
     }
@@ -80,19 +94,25 @@ public class JavaScriptApiGenerator extends AbstractCommonGenerator {
         Map<String, Object> parameters = new HashMap<>();
 
         List<Map.Entry> apis = context.getApis().getValues().stream().map(apiInfo -> {
-            JavaScriptApiWrapper wrapper = new JavaScriptApiWrapper(context, apiInfo, rootPackage, apiNameMaper);
+            JavaScriptApiWrapper wrapper = new JavaScriptApiWrapper(context, apiInfo, outRootPackage, apiNameMaper, serviceId);
             String value = wrapper.getDistPackage().replace(".", "/") + '/' + wrapper.getDistClassName();
             return new AbstractMap.SimpleImmutableEntry<>(wrapper.getDistClassName(), value);
         }).collect(Collectors.toList());
 
         parameters.put("apis", apis);
 
-        File tsFile = LocalPathUtils.packToPath(outPath, "", "index", ".d.ts");
+        File jsFile = LocalPathUtils.packToPath(outPath, "", "index", ".js");
+        File dFile = LocalPathUtils.packToPath(outPath, "", "index", ".d.ts");
 
         execute(
                 parameters,
+                getTemplateFile("index.httl"),
+                jsFile
+        );
+        execute(
+                parameters,
                 getTemplateFile("index.d.httl"),
-                tsFile
+                dFile
         );
     }
 
@@ -110,7 +130,11 @@ public class JavaScriptApiGenerator extends AbstractCommonGenerator {
             }
         }
 
-        packageJson.put("name", "");
+        String apiType = "";
+        if (StringUtils.isNotEmpty(this.apiType)) {
+            apiType = "-" + this.apiType;
+        }
+        packageJson.put("name", "rxjava-apis-" + serviceId + apiType);
         if (this.version != null) {
             String prevVersionText = packageJson.get("version").asText();
             if (prevVersionText != null) {

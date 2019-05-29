@@ -26,6 +26,9 @@ public class ApikitMojo extends AbstractMojo {
     @Parameter
     private String rootPackage;
 
+    @Parameter
+    private String apiType;
+
     @Override
     public void execute() {
 
@@ -45,7 +48,7 @@ public class ApikitMojo extends AbstractMojo {
 
         getLog().info("开始执行全部任务" + tasks + pluginContext);
 
-        MavenUtils.generate(project, new Group(tasks, rootPackage), javaSourcePath, compileSourceRoots);
+        MavenUtils.generate(project, new Group(tasks, rootPackage, apiType), javaSourcePath, compileSourceRoots);
 
     }
 }

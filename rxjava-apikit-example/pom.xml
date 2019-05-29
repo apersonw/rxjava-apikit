@@ -40,27 +40,39 @@
                 <configuration>
                     <groups>
                         <group implementation="org.rxjava.apikit.plugin.bean.Group">
-                            <rootPackage>org.rxjava.apikit.${module.name}.person</rootPackage>
+                            <rootPackage>org.rxjava.apikit.${module.name}.client</rootPackage>
+                            <apiType>client</apiType>
                             <tasks>
                                 <task implementation="org.rxjava.apikit.plugin.bean.GitTask">
                                     <url>git@github.com:apersonw/rxjava-apis.git</url>
-                                    <outPath>${module.name}/java/rxjava-apis-${module.name}-client/src/main/java</outPath>
+                                    <outPath>${module.name}/java/rxjava-apis-${module.name}-client/src/main/java
+                                    </outPath>
                                     <deleteUris>org</deleteUris>
                                     <task implementation="org.rxjava.apikit.plugin.bean.JavaClientTask">
-                                        <rootPackage>org.rxjava.api.person.${module.name}</rootPackage>
+                                        <outRootPackage>org.rxjava.api.client.${module.name}</outRootPackage>
+                                    </task>
+                                </task>
+                                <task implementation="org.rxjava.apikit.plugin.bean.GitTask">
+                                    <url>git@github.com:apersonw/rxjava-apis.git</url>
+                                    <outPath>${module.name}/js/rxjava-apis-${module.name}-client</outPath>
+                                    <deleteUris>org</deleteUris>
+                                    <task implementation="org.rxjava.apikit.plugin.bean.JavaScriptClientTask">
+                                        <outRootPackage/>
+                                        <serviceId>${module.name}</serviceId>
                                     </task>
                                 </task>
                             </tasks>
                         </group>
                         <group implementation="org.rxjava.apikit.plugin.bean.Group">
-                            <rootPackage>org.rxjava.apikit.${module.name}.admin</rootPackage>
+                            <rootPackage>org.rxjava.apikit.${module.name}.dashboard</rootPackage>
                             <tasks>
                                 <task implementation="org.rxjava.apikit.plugin.bean.GitTask">
                                     <url>git@github.com:apersonw/rxjava-apis.git</url>
-                                    <outPath>${module.name}/java/rxjava-apis-${module.name}-admin/src/main/java</outPath>
+                                    <outPath>${module.name}/java/rxjava-apis-${module.name}-dashboard/src/main/java
+                                    </outPath>
                                     <deleteUris>org</deleteUris>
                                     <task implementation="org.rxjava.apikit.plugin.bean.JavaClientTask">
-                                        <rootPackage>org.rxjava.api.admin.${module.name}</rootPackage>
+                                        <outRootPackage>org.rxjava.api.dashboard.${module.name}</outRootPackage>
                                     </task>
                                 </task>
                             </tasks>

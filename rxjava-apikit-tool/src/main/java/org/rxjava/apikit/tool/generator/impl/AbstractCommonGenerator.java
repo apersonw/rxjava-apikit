@@ -17,7 +17,7 @@ public abstract class AbstractCommonGenerator extends AbstractHttlGenerator {
      */
     File createApiFile(BuilderWrapper wrapper, String suffix) {
         String fullDistPackage = wrapper.getFullDistPackage();
-        if ("d.ts".equals(suffix)) {
+        if ("d.ts".equals(suffix) || ("js".equals(suffix))) {
             fullDistPackage = "";
         }
         return LocalPathUtils.packToPath(outPath, fullDistPackage, wrapper.getDistClassName(), "." + suffix);

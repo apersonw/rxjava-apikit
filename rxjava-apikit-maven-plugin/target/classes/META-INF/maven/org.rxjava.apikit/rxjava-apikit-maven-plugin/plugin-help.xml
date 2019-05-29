@@ -27,6 +27,13 @@
       <threadSafe>false</threadSafe>
       <parameters>
         <parameter>
+          <name>apiType</name>
+          <type>java.lang.String</type>
+          <required>false</required>
+          <editable>true</editable>
+          <description></description>
+        </parameter>
+        <parameter>
           <name>rootPackage</name>
           <type>java.lang.String</type>
           <required>false</required>

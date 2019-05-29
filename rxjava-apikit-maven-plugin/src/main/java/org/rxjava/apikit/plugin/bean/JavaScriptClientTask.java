@@ -8,8 +8,9 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class JavaClientTask extends AbstractTask {
+public class JavaScriptClientTask extends AbstractTask {
     private String nameMaperSource;
     private String nameMaperDist;
     private String outRootPackage;
+    private String serviceId;
 }

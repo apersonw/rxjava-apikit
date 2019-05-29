@@ -5,15 +5,13 @@ import com.fasterxml.jackson.databind.type.TypeFactory;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.maven.plugin.logging.Log;
 import org.apache.maven.plugin.logging.SystemStreamLog;
-import org.rxjava.apikit.plugin.bean.GitTask;
-import org.rxjava.apikit.plugin.bean.Group;
-import org.rxjava.apikit.plugin.bean.JavaClientTask;
-import org.rxjava.apikit.plugin.bean.Task;
+import org.rxjava.apikit.plugin.bean.*;
 import org.rxjava.apikit.tool.ApiGenerateManager;
 import org.rxjava.apikit.tool.generator.AbstractGenerator;
 import org.rxjava.apikit.tool.generator.Generator;
 import org.rxjava.apikit.tool.generator.impl.GitGenerator;
 import org.rxjava.apikit.tool.generator.impl.JavaClientApiGenerator;
+import org.rxjava.apikit.tool.generator.impl.JavaScriptApiGenerator;
 
 import java.util.List;
 
@@ -40,6 +38,7 @@ public class GenerateUtils {
 
     public static void generate(Group group, String javaSourcePath, String[] srcPaths, Log log) {
         List<Task> tasks = group.getTasks();
+
         if (CollectionUtils.isEmpty(tasks)) {
             log.info("当前没有任务");
             return;
@@ -52,8 +51,7 @@ public class GenerateUtils {
 
                 //源码所在根包路径
                 String rootPackage = group.getRootPackage();
-
-
+                String apiType = group.getApiType();
 
                 if (task instanceof GitTask) {
                     GitTask gitTask = (GitTask) task;
@@ -69,7 +67,7 @@ public class GenerateUtils {
 
                     //初始化api生成管理器
                     ApiGenerateManager manager = new ApiGenerateManager(javaSourcePath, rootPackage);
-                    Generator generator = createGenerator(gitTask.getTask());
+                    Generator generator = createGenerator(gitTask.getTask(), apiType);
                     gitGenerator.setGenerator((AbstractGenerator) generator);
 
                     //设置输出文件夹和需要删除的文件夹
@@ -86,15 +84,26 @@ public class GenerateUtils {
     }
 
     //根据任务类型创建生成器
-    private static Generator createGenerator( Task task) {
+    private static Generator createGenerator(Task task, String apiType) {
         //执行生成java客户端Api任务
         if (task instanceof JavaClientTask) {
             JavaClientTask javaClientTask = (JavaClientTask) task;
             JavaClientApiGenerator javaClientApiGenerator = new JavaClientApiGenerator();
 
             //设置生成的api根包路径
-            javaClientApiGenerator.setRootPackage(javaClientTask.getRootPackage());
+            javaClientApiGenerator.setOutRootPackage(javaClientTask.getOutRootPackage());
             return javaClientApiGenerator;
+        }
+        //执行生成js客户端Api任务
+        if (task instanceof JavaScriptClientTask) {
+            JavaScriptClientTask javaClientTask = (JavaScriptClientTask) task;
+            JavaScriptApiGenerator javaScriptApiGenerator = new JavaScriptApiGenerator();
+
+            //设置生成的api根包路径
+            javaScriptApiGenerator.setOutRootPackage(javaClientTask.getOutRootPackage());
+            javaScriptApiGenerator.setServiceId(javaClientTask.getServiceId());
+            javaScriptApiGenerator.setApiType(apiType);
+            return javaScriptApiGenerator;
         }
         throw new RuntimeException("错误的任务类型:" + task.getClass() + ",task:" + task);
     }

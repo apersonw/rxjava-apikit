@@ -1,6 +1,7 @@
 /Users/happy/Projects/rxjava-apikit/rxjava-apikit-tool/src/main/java/org/rxjava/apikit/tool/info/FieldInfo.java
 /Users/happy/Projects/rxjava-apikit/rxjava-apikit-tool/src/main/java/org/rxjava/apikit/tool/generator/Context.java
 /Users/happy/Projects/rxjava-apikit/rxjava-apikit-tool/src/main/java/org/rxjava/apikit/tool/info/JavadocInfo.java
+/Users/happy/Projects/rxjava-apikit/rxjava-apikit-tool/src/main/java/org/rxjava/apikit/tool/wrapper/JavaScriptParamClassWrapper.java
 /Users/happy/Projects/rxjava-apikit/rxjava-apikit-tool/src/main/java/org/rxjava/apikit/tool/info/ClassInfo.java
 /Users/happy/Projects/rxjava-apikit/rxjava-apikit-tool/src/main/java/org/rxjava/apikit/tool/generator/impl/JavaClientApiGenerator.java
 /Users/happy/Projects/rxjava-apikit/rxjava-apikit-tool/src/main/java/org/rxjava/apikit/tool/analyse/impl/ParamClassAnalyse.java

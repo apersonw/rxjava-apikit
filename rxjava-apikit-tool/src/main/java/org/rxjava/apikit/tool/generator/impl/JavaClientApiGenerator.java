@@ -19,7 +19,7 @@ import java.io.File;
 public class JavaClientApiGenerator extends AbstractCommonGenerator {
 
     public JavaClientApiGenerator(String rootPackage,String outPath) {
-        setRootPackage(rootPackage);
+        setOutRootPackage(rootPackage);
         setOutPath(outPath);
     }
 
@@ -37,7 +37,7 @@ public class JavaClientApiGenerator extends AbstractCommonGenerator {
     @Override
     public void generateApiFile(ApiClassInfo apiInfo) throws Exception {
         JavaApiWrapper wrapper = new JavaApiWrapper(
-                context, apiInfo, rootPackage, apiNameMaper
+                context, apiInfo, outRootPackage, apiNameMaper
         );
         File file = createApiFile(wrapper, "java");
         executeModule(wrapper, "/org/rxjava/apikit/tool/generator/java/ClientAdapter.httl", file);
@@ -64,7 +64,7 @@ public class JavaClientApiGenerator extends AbstractCommonGenerator {
      */
     @Override
     protected JavaParamClassWrapper createParamClassWarpper(ParamClassInfo paramClassInfo, String distPack, String fileName) {
-        JavaParamClassWrapper javaClassWrapper = new JavaParamClassWrapper(context, paramClassInfo, rootPackage);
+        JavaParamClassWrapper javaClassWrapper = new JavaParamClassWrapper(context, paramClassInfo, outRootPackage);
         javaClassWrapper.setDistFolder(distPack);
         return javaClassWrapper;
     }

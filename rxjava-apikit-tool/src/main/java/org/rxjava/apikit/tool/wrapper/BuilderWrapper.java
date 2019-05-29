@@ -29,9 +29,13 @@ public class BuilderWrapper<T extends ClassInfo> {
      */
     private String distRootPackage;
     /**
+     * 微服务Id
+     */
+    private String serviceId;
+    /**
      * 发布的文件夹
      */
-    private String distFolder;
+    protected String distFolder;
     /**
      * 上下文
      */

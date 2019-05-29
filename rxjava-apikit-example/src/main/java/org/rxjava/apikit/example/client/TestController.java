@@ -1,4 +1,4 @@
-package org.rxjava.apikit.example.person;
+package org.rxjava.apikit.example.client;
 
 import org.rxjava.apikit.core.Login;
 import org.rxjava.apikit.example.form.TestForm;

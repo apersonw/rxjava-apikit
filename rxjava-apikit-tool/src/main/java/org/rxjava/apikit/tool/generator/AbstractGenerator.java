@@ -28,9 +28,17 @@ public abstract class AbstractGenerator implements Generator {
      */
     protected String outPath;
     /**
-     * 根路径
+     * 输出的根包路径
      */
-    protected String rootPackage;
+    protected String outRootPackage;
+    /**
+     * 微服务Id
+     */
+    protected String serviceId;
+    /**
+     * 微服务接口类型
+     */
+    protected String apiType;
     /**
      * 版本号
      */

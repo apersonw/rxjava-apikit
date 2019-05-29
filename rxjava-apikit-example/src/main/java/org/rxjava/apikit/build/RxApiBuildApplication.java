@@ -35,12 +35,13 @@ public class RxApiBuildApplication implements CommandLineRunner {
 
         //配置java客户端生成器
         JavaClientApiGenerator javaClientApiGenerator = new JavaClientApiGenerator();
-        javaClientApiGenerator.setRootPackage("org.rxjava.api.example");
+        javaClientApiGenerator.setOutRootPackage("org.rxjava.api.example");
         javaClientApiGenerator.setOutPath(javaOutPath);
 
         //配置js客户端生成器
         JavaScriptApiGenerator javaScriptApiGenerator = new JavaScriptApiGenerator();
         javaScriptApiGenerator.setOutPath(jsOutPath);
+        javaScriptApiGenerator.setServiceId("example");
 
         //初始化api生成管理器
         ApiGenerateManager apiGenerateManager = new ApiGenerateManager(javaSourceDir, "org.rxjava.apikit.example");

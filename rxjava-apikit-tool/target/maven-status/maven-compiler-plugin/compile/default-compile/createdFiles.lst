@@ -26,6 +26,7 @@ org/rxjava/apikit/tool/wrapper/JavaParamClassWrapper.class
 org/rxjava/apikit/tool/wrapper/JavaScriptApiWrapper.class
 org/rxjava/apikit/tool/wrapper/BuilderWrapper.class
 org/rxjava/apikit/tool/ApiGenerateManager.class
+org/rxjava/apikit/tool/wrapper/JavaScriptParamClassWrapper.class
 org/rxjava/apikit/tool/generator/impl/JavaScriptApiGenerator.class
 org/rxjava/apikit/tool/analyse/impl/ParamClassAnalyse.class
 org/rxjava/apikit/tool/ObjectFactory.class
