@@ -2,70 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ec3dc6c-2328-4f99-a8a1-ce5bbbd053d1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/ApiGenerateManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/ObjectFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/analyse/Analyse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/analyse/MessageAnalyse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/analyse/impl/ControllerAnalyse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/analyse/impl/ParamClassAnalyse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/generator/AbstractGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/generator/ClassNameMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/generator/Context.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/generator/Generator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/generator/NameMaper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/generator/PackageNameMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/generator/es2015/Api.d.httl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/generator/es2015/Api.httl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/generator/es2015/ParamClass.d.httl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/generator/es2015/ParamClass.httl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/generator/es2015/index.d.httl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/generator/es2015/index.httl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/generator/es2015/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/generator/impl/AbstractCommonGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/generator/impl/AbstractHttlGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/generator/impl/DefaultClassNameMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/generator/impl/DefaultPackageNameMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/generator/impl/GitGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/generator/impl/JavaClientApiGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/generator/impl/JavaScriptApiGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/generator/impl/PatternNameMaper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/generator/java/ClientAdapter.httl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/generator/java/ParamClass.httl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/httl.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/info/AnnotationInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/info/ApiClassInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/info/ApiMethodInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/info/ApiMethodParamInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/info/ClassInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/info/FieldInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/info/Import.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/info/JavadocInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/info/PackageInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/info/ParamClassInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/info/PropertyInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/info/TypeInfo$Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/info/TypeInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/utils/CommentUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/utils/DateTimeUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/utils/HttlUtils$Inner.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/utils/HttlUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/utils/JavaFileFormat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/utils/JsonUtils$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/utils/JsonUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/utils/LocalPathUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/utils/NameUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/wrapper/BuilderWrapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/wrapper/JavaApiWrapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/wrapper/JavaParamClassWrapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/wrapper/JavaScriptApiWrapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/wrapper/JavaScriptParamClassWrapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/wrapper/JavaScriptWrapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/wrapper/JavaWrapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/classes/org/rxjava/apikit/tool/wrapper/JdtClassWappper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/docker.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rxjava-apikit-tool/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rxjava-apikit-core/target/docker.jar" beforeDir="false" afterPath="$PROJECT_DIR$/rxjava-apikit-core/target/docker.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rxjava-apikit-core/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/rxjava-apikit-core/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rxjava-apikit-example/target/docker.jar" beforeDir="false" afterPath="$PROJECT_DIR$/rxjava-apikit-example/target/docker.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rxjava-apikit-example/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/rxjava-apikit-example/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rxjava-apikit-maven-plugin/target/classes/META-INF/maven/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rxjava-apikit-maven-plugin/target/classes/META-INF/maven/plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rxjava-apikit-maven-plugin/target/docker.jar" beforeDir="false" afterPath="$PROJECT_DIR$/rxjava-apikit-maven-plugin/target/docker.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rxjava-apikit-maven-plugin/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/rxjava-apikit-maven-plugin/target/maven-archiver/pom.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/rxjava-apikit-tool/target/" />
@@ -83,7 +27,18 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="123">
+              <caret line="202" column="25" selection-start-line="202" selection-start-column="25" selection-end-line="202" selection-end-column="25" />
+            </state>
+          </provider>
+          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -95,9 +50,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ApiItem</find>
-      <find>System.</find>
-      <find>如果有</find>
       <find>jdt</find>
       <find>requestGroupImpi</find>
       <find>d.httl</find>
@@ -125,6 +77,9 @@
       <find>TestApi</find>
       <find>testApi</find>
       <find>testPath</find>
+      <find>profiles</find>
+      <find>maven2</find>
+      <find>com.fasterxml.jackson.core</find>
     </findStrings>
     <replaceStrings>
       <replace>getDistClassName</replace>
@@ -141,7 +96,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/rxjava-apikit-tool/src/main/java/org/rxjava/apikit/tool/ApiGenerateManager.java" />
         <option value="$PROJECT_DIR$/rxjava-apikit-example/src/main/java/org/rxjava/apikit/example/admin/TestController.java" />
         <option value="$PROJECT_DIR$/rxjava-apikit-maven-plugin/src/main/java/org/rxjava/apikit/plugin/MavenUtils.java" />
         <option value="$PROJECT_DIR$/rxjava-apikit-tool/src/main/java/org/rxjava/apikit/tool/generator/impl/GitGenerator.java" />
@@ -192,6 +146,7 @@
         <option value="$PROJECT_DIR$/rxjava-apikit-tool/src/main/resources/org/rxjava/apikit/tool/generator/es2015/Api.js" />
         <option value="$PROJECT_DIR$/rxjava-apikit-maven-plugin/src/main/java/org/rxjava/apikit/plugin/bean/JavaClientTask.java" />
         <option value="$PROJECT_DIR$/rxjava-apikit-tool/src/main/resources/org/rxjava/apikit/tool/generator/es2015/Api.httl" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -213,12 +168,17 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="rxjava-apikit-example" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="rxjava-apikit" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="rxjava-apikit-example" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Run Configurations" type="21c1f71a:MavenProjectsStructure$RunConfigurationsNode" />
+          <item name="rxjava-apikit" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="rxjava-apikit" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
         </path>
       </expand>
       <select />
@@ -234,6 +194,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -241,17 +203,10 @@
               <item name="rxjava-apikit" type="b2602c69:ProjectViewProjectNode" />
               <item name="rxjava-apikit" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="rxjava-apikit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rxjava-apikit" type="462c0819:PsiDirectoryNode" />
-              <item name="rxjava-apikit-tool" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -269,10 +224,10 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
@@ -416,7 +371,8 @@
       <workItem from="1559233352728" duration="1646000" />
       <workItem from="1559235694640" duration="256000" />
       <workItem from="1559665549563" duration="670000" />
-      <workItem from="1559667137567" duration="251000" />
+      <workItem from="1559667137567" duration="6248000" />
+      <workItem from="1559677086098" duration="1359000" />
     </task>
     <task id="LOCAL-00001" summary="一系列修改">
       <created>1559094522491</created>
@@ -439,16 +395,23 @@
       <option name="project" value="LOCAL" />
       <updated>1559667385975</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="一系列修改">
+      <created>1559677109807</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1559677109807</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94414000" />
+    <option name="totallyTimeSpent" value="101770000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49430895" visible="true" weight="0.2826618" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49430895" visible="true" weight="0.2826618" />
       <window_info id="Structure" order="1" sideWeight="0.50569105" side_tool="true" weight="0.25763127" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -463,14 +426,14 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32984293" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.4963351" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.5329843" />
       <window_info anchor="bottom" id="Docker" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50061053" side_tool="true" weight="0.44188482" />
       <window_info anchor="bottom" id="Statistic" order="11" />
       <window_info anchor="bottom" id="Run with VisualVM" order="12" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
-      <window_info anchor="bottom" id="Version Control" order="15" />
+      <window_info anchor="bottom" id="Version Control" order="15" weight="0.32984293" />
       <window_info anchor="bottom" id="Messages" order="16" weight="0.32984293" />
       <window_info anchor="bottom" id="Debug with VisualVM" order="17" />
       <window_info anchor="bottom" id="Tail" order="18" />
@@ -548,6 +511,46 @@
       </list>
     </option>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
@@ -579,13 +582,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/rxjava-apikit-tool/src/main/java/org/rxjava/apikit/tool/generator/impl/JavaClientApiGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="22" column="28" lean-forward="true" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rxjava-apikit-tool/src/main/java/org/rxjava/apikit/tool/generator/impl/AbstractCommonGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -844,6 +840,14 @@
           <caret line="68" column="13" lean-forward="true" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="202" column="25" selection-start-line="202" selection-start-column="25" selection-end-line="202" selection-end-column="25" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
     </entry>
   </component>
   <component name="masterDetails">

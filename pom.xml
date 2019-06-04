@@ -81,7 +81,7 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.9.8</version>
+            <version>2.9.9</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -329,6 +329,7 @@
                         <version>1.6</version>
                         <executions>
                             <execution>
+                                <id>sign-artifacts</id>
                                 <phase>verify</phase>
                                 <goals>
                                     <goal>sign</goal>
@@ -336,15 +337,29 @@
                             </execution>
                         </executions>
                     </plugin>
+                    <plugin>
+                        <groupId>org.sonatype.plugins</groupId>
+                        <artifactId>nexus-staging-maven-plugin</artifactId>
+                        <version>1.6.8</version>
+                        <extensions>true</extensions>
+                        <configuration>
+                            <serverId>ossrh</serverId>
+                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                        </configuration>
+                    </plugin>
                 </plugins>
             </build>
         </profile>
     </profiles>
     <distributionManagement>
         <snapshotRepository>
-            <id>sonatype-nexus-snapshots</id>
+            <id>oss</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
         </snapshotRepository>
+        <repository>
+            <id>oss</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
     </distributionManagement>
     <licenses>
         <license>
@@ -363,8 +378,8 @@
     <scm>
         <tag>master</tag>
         <url>https://github.com/apersonw/rxjava-apikit.git</url>
-        <connection>scm:git:https://github.com/apersonw/rxjava-apikit.git</connection>
-        <developerConnection>scm:git:https://github.com/apersonw/rxjava-apikit.git</developerConnection>
+        <connection>scm:git:git@github.com:apersonw/rxjava-apikit.git</connection>
+        <developerConnection>scm:git:git@github.com:apersonw/rxjava-apikit.git</developerConnection>
     </scm>
 
     <parent>
