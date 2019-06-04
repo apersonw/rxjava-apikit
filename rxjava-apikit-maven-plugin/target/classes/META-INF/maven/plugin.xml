@@ -4,7 +4,7 @@
 
 <plugin>
   <name>rxjava-apikit-maven-plugin</name>
-  <description></description>
+  <description>Sonatype helps open source projects to set up Maven repositories on https://oss.sonatype.org/</description>
   <groupId>org.rxjava.apikit</groupId>
   <artifactId>rxjava-apikit-maven-plugin</artifactId>
   <version>1.0.0-SNAPSHOT</version>
