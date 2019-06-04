@@ -83,23 +83,19 @@ public class JavaScriptApiWrapper extends JavaScriptWrapper<ApiClassInfo> {
         return imports(true);
     }
 
-    //
     public String imports(boolean isModel) {
-        //自己的目录级别
-        int myLevel = getMyLevel();
-        String imports = isModel ? getMethodImports() : "";
-        return imports +
-                "import {AbstractApi} from 'rxjava-api-core'\n";
-//        return imports +
-//                "\nimport {AbstractApi} from 'apikit-core'\n" +
-//                "\nimport {requestGroupImpi} from 'apikit-core'\n";
+        String imports = isModel ? getMethodImports(false) : "";
+        return imports + "import {AbstractApi} from 'rxjava-api-core'\n";
     }
 
-    public String getMethodImports() {
+    public String es2015imports() {
+        return getMethodImports(true);
+    }
+
+    public String getMethodImports(boolean isEs2015) {
         StringBuilder sb = new StringBuilder();
 
         int myLevel = getMyLevel();
-
 
         Flux
                 .fromIterable(classInfo.getMethodInfos())
@@ -125,11 +121,20 @@ public class JavaScriptApiWrapper extends JavaScriptWrapper<ApiClassInfo> {
                 .filter(w -> !w.getDistFolder().equals(getDistFolder()))
                 .doOnNext(r -> {
                     String name = r.getDistClassName();
-                    sb.append("import ")
-                            .append(name)
-                            .append(" from './")
-                            .append(StringUtils.repeat("../", myLevel))
-                            .append(r.getDistFolder().replace(".", "/")).append('/').append(name).append("'\n").toString();
+                    if (isEs2015) {
+//                        var _TestForm = _interopRequireDefault(require("./form/TestForm"));
+                        sb.append("var _")
+                                .append(name)
+                                .append(" = _interopRequireDefault(require('./")
+                                .append(StringUtils.repeat("../", myLevel))
+                                .append(r.getDistFolder().replace(".", "/")).append('/').append(name).append("'))\n");
+                    } else {
+                        sb.append("import ")
+                                .append(name)
+                                .append(" from './")
+                                .append(StringUtils.repeat("../", myLevel))
+                                .append(r.getDistFolder().replace(".", "/")).append('/').append(name).append("'\n");
+                    }
                 })
                 .collectList()
                 .block();

@@ -16,15 +16,15 @@ import java.util.Arrays;
  * 注释说明
  */
 @RestController
-@RequestMapping("admin")
+@RequestMapping("dashboard")
 public class AdminTestController {
 
     /**
      * 路径变量测试
      */
     @Login(false)
-    @GetMapping("testssereeee/{id}")
-    public int testewwPath(
+    @GetMapping("testPath/{id}")
+    public int testPath(
             @PathVariable String id,
             @Valid TestForm form
     ) {

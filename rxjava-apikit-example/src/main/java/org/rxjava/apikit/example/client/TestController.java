@@ -14,15 +14,15 @@ import javax.validation.Valid;
  * @author happy
  */
 @RestController
-@RequestMapping("person")
+@RequestMapping("client")
 public class TestController {
 
     /**
      * 路径变量测试
      */
     @Login(false)
-    @GetMapping("testeeee/{id}")
-    public Mono<Integer> testewwPath(
+    @GetMapping("testPath/{id}")
+    public Mono<Integer> testPath(
             @PathVariable String id,
             @Valid TestForm form
     ) {

@@ -75,7 +75,7 @@ public class JavaScriptApiGenerator extends AbstractCommonGenerator {
     }
 
     private String getTemplateFile(String name) {
-        return "/org/rxjava/apikit/tool/generator/es6/" + name;
+        return "/org/rxjava/apikit/tool/generator/es2015/" + name;
     }
 
     /**
